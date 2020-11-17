@@ -1,0 +1,30 @@
+html {
+  font-family: $font-family;
+  color: $color-gray;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 52px;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 28px;
+  color: $color-gray;
+  font-weight: $font-weight-regular;
+}

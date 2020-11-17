@@ -1,0 +1,67 @@
+@import "ol/ol.css";
+
+.o-map {
+  width: 100%;
+  height: 200px;
+}
+
+.o-form {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__input {
+    padding: 12px 20px;
+    color: $color-gray;
+    font-size: 24px;
+    border-radius: 6px;
+    box-shadow: unset;
+    border: 2px solid rgba($color-gray, 0.3);
+    outline: 0;
+    margin-right: 10px;
+    transition: $transition;
+
+    &:focus {
+      border-color: $color-primary;
+    }
+
+    &--error {
+      border-color: $color-warning;
+    }
+  }
+}
+
+.o-btn {
+  box-shadow: unset;
+  border: 2px solid rgba($color-gray, 0);
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: $transition;
+
+  &--primary {
+    background-color: $color-primary;
+    color: #fff;
+  }
+
+  &[disabled] {
+    background-color: $color-gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.o-message {
+  &__content {
+    position: absolute;
+    font-size: 12px;
+    color: $color-warning;
+    left: 20px;
+    bottom: -18px;
+  }
+}

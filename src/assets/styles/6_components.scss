@@ -1,0 +1,125 @@
+.c-top {
+  height: 80px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $breakpoint-tablet) {
+    justify-content: center;
+  }
+}
+
+.c-boxes {
+  $this: &;
+
+  background-color: $color-light-gray;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &__h1,
+  &__h2 {
+    color: $color-dark-gray;
+  }
+
+  &__h2 {
+    margin-bottom: 40px;
+  }
+
+  &__h3 {
+    font-weight: $font-weight-light;
+    margin-bottom: 40px;
+    color: $color-gray;
+
+    &--box {
+      color: $color-dark-gray;
+      margin-bottom: 10px;
+    }
+
+    #{$this}--dark-bg & {
+      color: #fff;
+    }
+  }
+
+  &__wrapper-headings {
+    text-align: center;
+  }
+
+  &__wrapper-boxes {
+    display: flex;
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+    }
+
+    .siema {
+      display: block;
+      margin-left: -10px;
+      margin-right: -10px;
+
+      & > div {
+        display: flex;
+
+        div {
+          display: flex;
+
+          div {
+            margin-right: 10px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    &--siema {
+      display: block;
+      position: relative;
+    }
+  }
+
+  &__box {
+    background-color: #fff;
+    flex: 1;
+    margin-right: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &:last-child {
+      margin-right: unset;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-right: unset;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    margin-top: 10px;
+  }
+
+  &--dot {
+    &:after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-color: $color-warning;
+      border-radius: 50px;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+      z-index: 1;
+    }
+  }
+
+  &--dark-bg {
+    background-color: $color-primary;
+    color: #fff;
+  }
+}

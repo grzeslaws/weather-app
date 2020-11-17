@@ -1,0 +1,12 @@
+<div class="wrapper" *ngIf="location">
+  <div class="wrapper-name">
+    <div class="location-name">{{ location.name }}</div>
+
+    <button class="remove" (click)="removeMarker(location.id)">x</button>
+  </div>
+  <div class="wrapper-details">
+    <div>{{ upperCaseFirst(location.weather[0]?.description) }}</div>
+    <div>{{ location.main.temp }} st Celcjusza</div>
+    <div>{{ location.main.pressure }} Hektopaskali</div>
+  </div>
+</div>

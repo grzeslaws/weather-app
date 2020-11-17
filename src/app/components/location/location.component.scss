@@ -1,0 +1,38 @@
+@import "../../../assets/styles/1_settings.scss";
+
+.wrapper {
+  margin-bottom: 20px;
+}
+
+.wrapper-name {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.wrapper-details {
+  div {
+    margin-bottom: 5px;
+  }
+}
+
+.location-name {
+  font-size: 20px;
+}
+
+.remove {
+  color: $color-warning;
+  border: unset;
+  background: unset;
+  font-size: 20px;
+  padding: unset;
+  line-height: 0;
+  position: relative;
+  top: -1px;
+  left: 10px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+      opacity: 0.5;
+  }
+}
